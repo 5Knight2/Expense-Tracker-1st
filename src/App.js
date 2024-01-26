@@ -1,5 +1,4 @@
 import ExpenseItem from './Components/ExpenseItem'
-import Food from './Components/Food'
 
 function App() {
   const data=[{title:'Food',amount:240,date:new Date(2024,1,25),location:"Akola"},
