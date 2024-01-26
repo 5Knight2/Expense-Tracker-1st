@@ -1,6 +1,6 @@
-import Expenses from './Components/Expenses'
+import Expenses from './Components/Expenses/Expenses'
 
-function App() {
+const App=()=> {
   const data=[{title:'Food',amount:240,date:new Date(2024,1,25),location:"Akola"},
   {title:'Party',amount:1240,date:new Date(2024,2,25),location:"Akola"},
   {title:'gym',amount:2400,date:new Date(2024,1,21),location:'pune'}]
