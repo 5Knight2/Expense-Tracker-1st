@@ -1,4 +1,3 @@
-import Card from '../UI/Card';
 import ExpenseForm from './ExpenseForm';
 import './NewExpense.css';
 

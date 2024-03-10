@@ -1,3 +1,5 @@
+
+import React,{useState} from 'react'
 import Expenses from './Components/Expenses/Expenses'
 import NewExpense from './Components/NewExpense/NewExpense'
 
@@ -6,14 +8,17 @@ const App=()=> {
   {title:'Party',amount:1240,date:new Date(2024,2,25),location:"Akola"},
   {title:'gym',amount:2400,date:new Date(2024,1,21),location:'pune'}]
 
-  const addExpenseHandler=(expense)=>{
-console.log('app.js',expense)
+  const [expenses,setExpenses]=useState(data);
+  const addExpenseHandler=async(expense)=>{
+    
+   await setExpenses((prevState)=> [expense,...prevState])
+console.log('app.js',expenses)
   }
   return (
     <div>
       <h2>Let's get started!</h2>
         <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
-        <Expenses items={data}  ></Expenses>
+        <Expenses items={expenses}  ></Expenses>
 
     </div>
   );
