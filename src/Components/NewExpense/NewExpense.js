@@ -1,11 +1,12 @@
-import Form from './Form'
-import './NewExpense.css'
+import Card from '../UI/Card';
+import ExpenseForm from './ExpenseForm';
+import './NewExpense.css';
 
 const NewExpense=()=>{
     return (
-        <div className='new-expense'>
-            <Form></Form>
-        </div>
+        <Card className='new-expense'>
+            <ExpenseForm></ExpenseForm>
+        </Card>
     )
 }
 export default NewExpense
