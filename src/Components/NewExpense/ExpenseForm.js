@@ -4,6 +4,7 @@ const ExpenseForm=(props)=> {
   // const[title,setTitle]=useState('');
   // const[amount,setAmount]=useState('');
   // const[date,setDate]=useState('');
+  
   const [formData,setFormData]=useState({title:'',amount:'',date:''})
 
   const titleChangeHandler=(event)=>{
@@ -45,6 +46,9 @@ const ExpenseForm=(props)=> {
         <div className="new-expense__control">
           <label for="date">Date</label>
           <input type="Date" value={formData.date} onChange={dateChangeHandler} name="date"></input>
+        </div>
+        <div className="new-expense__actions">
+          <button type="button" onClick={props.onCancel}> Cancel</button>
         </div>
         <div className="new-expense__actions">
           <button type="submit" onClick={formSubmitHandler}> Add</button>
